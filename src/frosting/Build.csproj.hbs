@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>{{if project.target}}{{project.target}}{{else}}netcoreapp1.1{{/if}}</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cake.Frosting" Version="{{ cake.version }}" />
+  </ItemGroup>
+
+</Project>

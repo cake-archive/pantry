@@ -1,0 +1,20 @@
+{
+    "$schema": "./template.schema.json",
+    "source": "",
+    "cake": {
+        "version": "",
+        "frosting": {
+            "context": "",
+            "lifetime": ""
+        },
+        "scriptFileName": ""
+    },
+    "project": {
+        "name": "",
+        "target": ""
+    },
+    "test": {
+        "xunit_version": "",
+        "target": ""
+    }
+}

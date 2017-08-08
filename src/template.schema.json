@@ -1,0 +1,117 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": true,
+    "definitions": {},
+    "id": "http://cakebuild.net/pantry/schema.json",
+    "properties": {
+        "cake": {
+            "additionalProperties": false,
+            "id": "/properties/cake",
+            "properties": {
+                "frosting": {
+                    "additionalProperties": false,
+                    "id": "/properties/cake/properties/frosting",
+                    "properties": {
+                        "context": {
+                            "id": "/properties/cake/properties/frosting/properties/context",
+                            "type": "string"
+                        },
+                        "lifetime": {
+                            "id": "/properties/cake/properties/frosting/properties/lifetime",
+                            "type": "string"
+                        },
+                        "tasks": {
+                            "additionalItems": false,
+                            "id": "/properties/cake/properties/frosting/properties/tasks",
+                            "items": {
+                                "additionalProperties": false,
+                                "id": "/properties/cake/properties/frosting/properties/tasks/items",
+                                "properties": {
+                                    "dependencies": {
+                                        "additionalItems": false,
+                                        "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/dependencies",
+                                        "items": {
+                                            "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/dependencies/items",
+                                            "type": "string"
+                                        },
+                                        "type": "array",
+                                        "uniqueItems": true
+                                    },
+                                    "name": {
+                                        "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/name",
+                                        "type": "string"
+                                    },
+                                    "skipRun": {
+                                        "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/skipRun",
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array",
+                            "uniqueItems": true
+                        }
+                    },
+                    "type": "object"
+                },
+                "version": {
+                    "id": "/properties/cake/properties/version",
+                    "type": "string"
+                },
+                "scriptFileName": {
+                    "id": "/properties/scriptFileName",
+                    "type": "string"
+                }
+            },
+            "type": "object",
+            "required": [
+                "version",
+                "scriptFileName"
+            ]
+        },
+        "project": {
+            "additionalProperties": true,
+            "id": "/properties/project",
+            "properties": {
+                "name": {
+                    "id": "/properties/project/properties/name",
+                    "type": "string"
+                },
+                "target": {
+                    "id": "/properties/project/properties/target",
+                    "type": "string"
+                }
+            },
+            "type": "object",
+            "required": [
+                "name"
+            ]
+        },
+        "source": {
+            "id": "/properties/source",
+            "type": "string"
+        },
+        "test": {
+            "additionalProperties": true,
+            "id": "/properties/test",
+            "properties": {
+                "target": {
+                    "id": "/properties/test/properties/target",
+                    "type": "string"
+                },
+                "xunit_version": {
+                    "id": "/properties/test/properties/xunit_version",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "type": "object",
+    "required": [
+        "source",
+        "cake",
+        "project",
+        "test"
+    ]
+}
