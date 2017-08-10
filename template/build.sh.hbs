@@ -27,7 +27,7 @@ else
 fi
 
 # Define default arguments.
-SCRIPT="{{if cake.scriptFileName}}{{cake.scriptFileName}}{{else}}build.cake{{/if}}"
+SCRIPT="{{#if cake.scriptFileName}}{{cake.scriptFileName}}{{else}}build.cake{{/if}}"
 CAKE_ARGUMENTS=()
 
 # Parse arguments.

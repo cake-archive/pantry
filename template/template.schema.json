@@ -39,19 +39,32 @@
                                     },
                                     "name": {
                                         "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/name",
+                                        "description": "The task name to generate",
                                         "type": "string"
                                     },
                                     "skipRun": {
                                         "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/skipRun",
+                                        "description": "Whether to skip the Run implementation when generating",
+                                        "default": "false",
                                         "type": "boolean"
                                     }
                                 },
+                                "required": [
+                                    "dependencies",
+                                    "name",
+                                    "skipRun"
+                                ],
                                 "type": "object"
                             },
                             "type": "array",
                             "uniqueItems": true
                         }
                     },
+                    "required": [
+                        "context",
+                        "lifetime",
+                        "tasks"
+                    ],
                     "type": "object"
                 },
                 "version": {
@@ -60,17 +73,19 @@
                 },
                 "scriptFileName": {
                     "id": "/properties/cake/properties/scriptFileName",
+                    "default": "build.cake",
                     "type": "string"
                 },
                 "target": {
                     "id": "/properties/cake/properties/target",
+                    "default": "netstandard1.6;net45",
                     "type": "string"
                 }
             },
             "type": "object",
             "required": [
                 "version",
-                "scriptFileName"
+                "target"
             ]
         },
         "project": {
@@ -101,10 +116,12 @@
             "properties": {
                 "target": {
                     "id": "/properties/test/properties/target",
+                    "default": "netcoreapp1.1",
                     "type": "string"
                 },
                 "xunit_version": {
                     "id": "/properties/test/properties/xunit_version",
+                    "default": "2.2.0",
                     "type": "string"
                 }
             },

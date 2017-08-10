@@ -6,7 +6,7 @@ namespace {{ project.name }}
 {
 	public class CakeFixture : ToolFixture<CakeToolSettings>
     {
-        public CakeFixture(bool scriptExists, string scriptName = "./{{if cake.scriptFileName}}{{cake.scriptFileName}}{{else}}build.cake{{/if}}") : base("cake.exe")
+        public CakeFixture(bool scriptExists, string scriptName = "./{{#if cake.scriptFileName}}{{cake.scriptFileName}}{{else}}build.cake{{/if}}") : base("cake.exe")
         {
             Environment = new FakeEnvironment(PlatformFamily.Linux);
             if (scriptExists) FileSystem.CreateFile(scriptName);

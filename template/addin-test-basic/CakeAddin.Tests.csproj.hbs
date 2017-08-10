@@ -1,13 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>{{if test.target}}{{test.target}}{{else}}netcoreapp1.1{{/if}}</TargetFramework>
+    <TargetFramework>{{#if test.target}}{{test.target}}{{else}}netcoreapp1.1{{/if}}</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
-    <PackageReference Include="xunit" Version="{{if test.xunit_version}}{{test.xunit_version}}{{else}}2.2.0{{/if}}" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="{{if test.xunit_version}}{{test.xunit_version}}{{else}}2.2.0{{/if}}" />
+    <PackageReference Include="xunit" Version="{{#if test.xunit_version}}{{test.xunit_version}}{{else}}2.2.0{{/if}}" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="{{#if test.xunit_version}}{{test.xunit_version}}{{else}}2.2.0{{/if}}" />
     <PackageReference Include="Cake.Core" Version="{{ cake.version }}" />
     <PackageReference Include="Cake.Testing" Version="{{ cake.version }}" />
   </ItemGroup>
