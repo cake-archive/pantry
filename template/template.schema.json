@@ -59,7 +59,11 @@
                     "type": "string"
                 },
                 "scriptFileName": {
-                    "id": "/properties/scriptFileName",
+                    "id": "/properties/cake/properties/scriptFileName",
+                    "type": "string"
+                },
+                "target": {
+                    "id": "/properties/cake/properties/target",
                     "type": "string"
                 }
             },
