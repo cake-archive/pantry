@@ -110,7 +110,7 @@ try {
         Invoke-Expression "dotnet publish -c Debug /v:q /nologo"
         if($LASTEXITCODE -eq 0) {
             Write-Output "Running build..."
-            Invoke-Expression "dotnet bin/Debug/{{#if project.target}}{{project.target}}{{else}}netcoreapp1.1{{/if}}/publish/{{project.name}}.dll $Arguments"
+            Invoke-Expression "dotnet bin/Debug/{{#if project.target}}{{{project.target}}}{{else}}netcoreapp1.1{{/if}}/publish/{{{project.name}}}.dll $Arguments"
         }
     }
 }

@@ -2,6 +2,8 @@
 
 A collection of simple Handlebars templates that can be used to generate resources or templates in a variety of formats.
 
+Note that since the majority of the expressions are **not** HTML-escaped (i.e. using `{{{ }}}`), these templates should not be used in an untrusted context.
+
 ## Data Model
 
 The templates include Handlebars data placeholders (i.e. `{{ variable }}`) for parts of the files that are likely to require changes. While some properties are provided with sane defaults in the templates, most are required to be passed in during the rendering process.

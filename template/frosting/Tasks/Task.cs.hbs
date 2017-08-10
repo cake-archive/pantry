@@ -1,14 +1,14 @@
 using Cake.Common.Diagnostics;
 using Cake.Frosting;
 
-[TaskName("{{name}}")]
+[TaskName("{{{name}}}")]
 {{#each dependencies}}
-[Dependency(typeof({{this}}))]
+[Dependency(typeof({{{this}}}))]
 {{/each}}
-public sealed class {{name}} : FrostingTask<Context>
+public sealed class {{{name}}} : FrostingTask<{{{ cake.frosting.context }}}>
 {
     {{#unless skipRun }}
-    public override void Run(Context context)
+    public override void Run({{{ cake.frosting.context }}} context)
     {
         context.Information("Hello World");
     }

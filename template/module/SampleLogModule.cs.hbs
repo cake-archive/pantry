@@ -2,9 +2,9 @@ using Cake.Core.Annotations;
 using Cake.Core.Composition;
 using Cake.Core.Diagnostics;
 
-[assembly: CakeModule(typeof({{ project.name }}.SampleLogModule))]
+[assembly: CakeModule(typeof({{{ project.name }}}.SampleLogModule))]
 
-namespace {{ project.name }}
+namespace {{{ project.name }}}
 {
     public class SampleLogModule : ICakeModule
     {

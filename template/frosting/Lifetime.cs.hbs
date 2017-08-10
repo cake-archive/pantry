@@ -2,14 +2,14 @@ using Cake.Common.Diagnostics;
 using Cake.Core;
 using Cake.Frosting;
 
-public sealed class {{cake.frosting.lifetime}} : FrostingLifetime<{{ cake.frosting.context }}>
+public sealed class {{{cake.frosting.lifetime}}} : FrostingLifetime<{{{ cake.frosting.context }}}>
 {
-    public override void Setup({{ cake.frosting.context }} context)
+    public override void Setup({{{ cake.frosting.context }}} context)
     {
         context.Information("Setting things up...");
     }
 
-    public override void Teardown({{ cake.frosting.context }} context, ITeardownContext info)
+    public override void Teardown({{{ cake.frosting.context }}} context, ITeardownContext info)
     {
         context.Information("Tearing things down...");
     }
