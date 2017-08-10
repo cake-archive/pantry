@@ -14,6 +14,8 @@
                     "properties": {
                         "context": {
                             "id": "/properties/cake/properties/frosting/properties/context",
+                            "required": true,
+                            "default": "Context",
                             "type": "string"
                         },
                         "lifetime": {

@@ -7,10 +7,10 @@ using Cake.Frosting;
 {{/each}}
 public sealed class {{name}} : FrostingTask<Context>
 {
-    {{#if !skipRun }}
+    {{#unless skipRun }}
     public override void Run(Context context)
     {
         context.Information("Hello World");
     }
-    {{/if}}
+    {{/unless}}
 }

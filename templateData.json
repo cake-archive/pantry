@@ -6,7 +6,10 @@
         "target": "netstandard1.6;net45",
         "frosting": {
             "context": "",
-            "lifetime": ""
+            "lifetime": "",
+            "tasks": [
+                
+            ]
         },
         "scriptFileName": ""
     },
