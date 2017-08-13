@@ -14,7 +14,6 @@
                     "properties": {
                         "context": {
                             "id": "/properties/cake/properties/frosting/properties/context",
-                            "required": true,
                             "default": "Context",
                             "type": "string"
                         },
@@ -49,6 +48,11 @@
                                         "description": "Whether to skip the Run implementation when generating",
                                         "default": "false",
                                         "type": "boolean"
+                                    },
+                                    "runBody": {
+                                        "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/runBody",
+                                        "description": "An optional body to include in the Task implementation's body",
+                                        "type": "string"
                                     }
                                 },
                                 "required": [

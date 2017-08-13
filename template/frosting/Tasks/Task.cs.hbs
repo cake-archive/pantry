@@ -7,6 +7,9 @@ using Cake.Frosting;
 {{/each}}
 public sealed class {{{name}}} : FrostingTask<{{{ cake.frosting.context }}}>
 {
+    {{#if runBody }}
+    {{{runBody}}}
+    {{/if}}
     {{#unless skipRun }}
     public override void Run({{{ cake.frosting.context }}} context)
     {
