@@ -1,7 +1,13 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "[Supports schema draft-04 only] A simple schema for the data model used by Cake Pantry templates.",
     "additionalProperties": true,
-    "definitions": {},
+    "definitions": {
+        "frostingContext": {
+            "type": "string",
+            "default": "FrostingContext"
+        }
+    },
     "id": "http://cakebuild.net/pantry/schema.json",
     "properties": {
         "cake": {
@@ -14,8 +20,7 @@
                     "properties": {
                         "context": {
                             "id": "/properties/cake/properties/frosting/properties/context",
-                            "default": "Context",
-                            "type": "string"
+                            "$ref": "#/definitions/frostingContext"
                         },
                         "lifetime": {
                             "id": "/properties/cake/properties/frosting/properties/lifetime",
@@ -53,6 +58,10 @@
                                         "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/runBody",
                                         "description": "An optional body to include in the Task implementation's body",
                                         "type": "string"
+                                    },
+                                    "context": {
+                                        "id": "/properties/cake/properties/frosting/properties/tasks/items/properties/context",
+                                        "$ref": "#/definitions/frostingContext"
                                     }
                                 },
                                 "required": [

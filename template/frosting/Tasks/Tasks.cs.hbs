@@ -1,19 +1,21 @@
 using Cake.Common.Diagnostics;
 using Cake.Frosting;
 
+{{#each cake.frosting.tasks }}
 [TaskName("{{{name}}}")]
 {{#each dependencies}}
 [Dependency(typeof({{{this}}}))]
 {{/each}}
-public sealed class {{{name}}} : FrostingTask{{#if context}}<{{{context}}}>{{/if}}
+public sealed class {{{name}}} : FrostingTask<{{{@root.cake.frosting.context}}}>
 {
     {{#if runBody }}
     {{{runBody}}}
     {{/if}}
     {{#unless skipRun }}
-    public override void Run({{#if context}}{{{context}}}{{else}}FrostingContext{{/if}} context)
+    public override void Run({{{@root.cake.frosting.context }}} context)
     {
         context.Information("Hello World");
     }
     {{/unless}}
 }
+{{/each}}

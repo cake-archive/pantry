@@ -12,6 +12,10 @@ The model in use is shared across all files so that the same model can be used a
 
 Note that the one exception is the Frosting task template which takes a singular task object (i.e. `/properties/cake/properties/frosting/properties/tasks/items` in the schema) as it can be generated multiple times.
 
+### Frosting
+
+Since it's a little more complicated, Frosting templates require a bit of forethought. This is most evident with generating Tasks: to use a custom context (i.e. inherit from `FrostingTask<TContext>` etc), you'll need to use the `template/frosting/Tasks/Tasks.cs.hbs` file which generates all tasks in the same file. To get separate files, use the `template/frosting/Tasks/Task.cs.hbs` file which takes a single `task` model (as above) and generates a single task implementation, but can only inherit from `FrostingTask`.
+
 ## Consuming projects
 
 These templates can be used by any tool to generate either finalised resources or tool-specific templates.
