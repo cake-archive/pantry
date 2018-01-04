@@ -3,7 +3,7 @@
     "source": "",
     "cake": {
         "version": "",
-        "target": "netstandard1.6;net45",
+        "target": "netstandard1.6;net46",
         "frosting": {
             "context": "",
             "lifetime": "",
