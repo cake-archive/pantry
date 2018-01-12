@@ -25,9 +25,12 @@ Teardown(ctx =>
 // TASKS
 ///////////////////////////////////////////////////////////////////////////////
 
-Task("Default")
+Task("Hello")
 .Does(() => {
 	Information("Hello Cake!");
 });
+
+Task("Default")
+.IsDependentOn("Hello");
 
 RunTarget(target);
